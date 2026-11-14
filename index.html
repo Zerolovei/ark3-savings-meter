@@ -7,7 +7,7 @@
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js';
 import {getFirestore,doc,onSnapshot,runTransaction} from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js';
 import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut} from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js';
-const firebaseConfig={apiKey:'AIzaSyA57YhVF_w-jmBBFZxrRLx50oo3dmzLQA',authDomain:'ark3-savings-meter.firebaseapp.com',projectId:'ark3-savings-meter',storageBucket:'ark3-savings-meter.firebasestorage.app',messagingSenderId:'253857552715',appId:'1:253857552715:web:f9742066082fcb08c030ce'};
+const firebaseConfig={apiKey:'AIzaSyA57YhVF_w-jmBBFZxrRlLx50oo3dmzLQA',authDomain:'ark3-savings-meter.firebaseapp.com',projectId:'ark3-savings-meter',storageBucket:'ark3-savings-meter.firebasestorage.app',messagingSenderId:'253857552715',appId:'1:253857552715:web:f9742066082fcb08c030ce'};
 const app=initializeApp(firebaseConfig),db=getFirestore(app),auth=getAuth(app),ref=doc(db,'savings','main');
 const names=['五反田','南青山','麻布十番','新橋','三軒茶屋','自由が丘','千歳船橋','大森','北千束','塩浜'];
 const initial={...Object.fromEntries(names.map(n=>[n,0])),negi:0};
